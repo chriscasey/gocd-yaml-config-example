@@ -17,7 +17,7 @@ pipelines:
                - exec: #indicates type of task
                    command: python
                    arguments:
-                    - manage.py
+                    - /godata/pipelines/build-dev/example_app/manage.py
                     - test 
                     - --noinput 
                     - --failfast 
