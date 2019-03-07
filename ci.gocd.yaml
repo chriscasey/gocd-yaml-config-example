@@ -17,7 +17,7 @@ pipelines:
                 - exec:
                     command: cd
                     arguments:
-                      - /godata/pipelines/build-dev/example_app
+                      - godata/pipelines/build-dev/example_app
                 - exec:
                     command: pipenv
                     arguments:
