@@ -15,11 +15,17 @@ pipelines:
             build-job:
               tasks:
                 - exec:
-                    command: pip3
+                    command: cd
+                    arguments:
+                      - /godata/pipelines/build-dev/example_app
+                - exec:
+                    command: pipenv
                     arguments:
                       - install
-                      - -r
-                      - /godata/pipelines/build-dev/requirements.txt
+                - exec:
+                    command: pipenv
+                    arguments:
+                      - shell
             test-job: # name of the job
               tasks:
                - exec: #indicates type of task
@@ -29,6 +35,4 @@ pipelines:
                     - /godata/pipelines/build-dev/example_app/manage.py
                     - test 
                     - --noinput 
-                    - --failfast 
-                    - --parallel
-                    - --verbosity 3
+                    - --failfast
