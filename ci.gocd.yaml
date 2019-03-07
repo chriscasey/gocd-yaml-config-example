@@ -15,7 +15,7 @@ pipelines:
             build-job:
               tasks:
                 - exec:
-                    command: pip
+                    command: pip3
                     arguments:
                       - install
                       - -r
