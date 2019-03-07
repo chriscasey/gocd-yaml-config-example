@@ -19,7 +19,7 @@ pipelines:
                     arguments:
                       - install
                       - -r
-                      - requirements.txt
+                      - /godata/pipelines/build-dev/example_app/requirements.txt
             test-job: # name of the job
               tasks:
                - exec: #indicates type of task
