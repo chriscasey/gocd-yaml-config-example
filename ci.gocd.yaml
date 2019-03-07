@@ -15,8 +15,6 @@ pipelines:
             build-job:
               tasks:
                 - exec:
-                    command: pwd
-                - exec:
                     command: pipenv
                     arguments:
                       - install
