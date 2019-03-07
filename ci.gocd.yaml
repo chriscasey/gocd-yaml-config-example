@@ -15,9 +15,7 @@ pipelines:
             build-job:
               tasks:
                 - exec:
-                    command: cd
-                    arguments:
-                      - godata/pipelines/build-dev/example_app
+                    command: pwd
                 - exec:
                     command: pipenv
                     arguments:
