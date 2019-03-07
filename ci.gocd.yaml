@@ -12,7 +12,15 @@ pipelines:
     stages:
       - build-stage: # name of stage
           jobs:
-            build-job: # name of the job
+            build-job:
+              tasks:
+                - exec:
+                    command: pip
+                    arguments:
+                      - install
+                      - -r
+                      - requirements.txt
+            test-job: # name of the job
               tasks:
                - exec: #indicates type of task
                    command: python
