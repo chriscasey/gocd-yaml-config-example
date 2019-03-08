@@ -17,14 +17,17 @@ pipelines:
                 - exec:
                     command: pipenv
                     arguments:
-                      - shell                                       
-            test-job: # name of the job
-              tasks:
-               - exec: #indicates type of task
-                   run_if: passed
-                   command: python
-                   arguments:
-                    - /godata/pipelines/build-dev/example_app/manage.py
-                    - test 
-                    - --noinput 
-                    - --failfast
+                      - run
+                      - python
+                      - /godata/pipelines/build-dev/example_app/manage.py
+                      - test                                     
+            # test-job: # name of the job
+            #   tasks:
+            #    - exec: #indicates type of task
+            #        run_if: passed
+            #        command: python
+            #        arguments:
+            #         - /godata/pipelines/build-dev/example_app/manage.py
+            #         - test 
+            #         - --noinput 
+            #         - --failfast
