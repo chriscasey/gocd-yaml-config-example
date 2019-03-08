@@ -15,9 +15,9 @@ pipelines:
             build-job:
               tasks:
                 - exec:
-                  command: pipenv
-                  arguments:
-                    - shell                                        
+                    command: pipenv
+                    arguments:
+                      - shell                                       
             test-job: # name of the job
               tasks:
                - exec: #indicates type of task
