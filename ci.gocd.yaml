@@ -20,6 +20,10 @@ pipelines:
                       - install
             test-job: # name of the job
               tasks:
+               - exec:
+                    command: pipenv
+                    arguments:
+                      - shell  
                - exec: #indicates type of task
                    run_if: passed
                    command: python
