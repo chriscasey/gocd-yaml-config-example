@@ -17,10 +17,16 @@ pipelines:
                 - exec:
                     command: pipenv
                     arguments:
+                      - install  
+                - exec:
+                    command: pipenv
+                    arguments:
                       - run
                       - python
                       - /godata/pipelines/build-dev/example_app/manage.py
-                      - test                                     
+                      - test
+                      - --noinput
+                      - --failfast                                  
             # test-job: # name of the job
             #   tasks:
             #    - exec: #indicates type of task
