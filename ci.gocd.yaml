@@ -23,7 +23,7 @@ pipelines:
                     arguments:
                       - run
                       - python
-                      - /godata/pipelines/build-dev/example_app/manage.py
+                      - example_app/manage.py
                       - test
                       - --noinput
                       - --failfast                                  
