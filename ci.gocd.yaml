@@ -12,20 +12,18 @@ pipelines:
     stages:
       - build-stage: # name of stage
           jobs:
-            build-job:
+            build-and-test-job:
               tasks:
                 - exec:
                     command: pipenv
                     arguments:
                       - install  
                 - exec:
-                    command: pwd
-                - exec:
                     command: pipenv
                     arguments:
                       - run
                       - python
-                      - manage.py
+                      - example_app/manage.py
                       - test
                       - --noinput
                       - --failfast                                  
