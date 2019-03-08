@@ -24,7 +24,7 @@ pipelines:
                    run_if: passed
                    command: python
                    arguments:
-                    - manage.py
+                    - /godata/pipelines/build-dev/example_app/manage.py
                     - test 
                     - --noinput 
                     - --failfast
