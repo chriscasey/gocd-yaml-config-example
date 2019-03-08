@@ -19,6 +19,8 @@ pipelines:
                     arguments:
                       - install  
                 - exec:
+                    command: pwd
+                - exec:
                     command: pipenv
                     arguments:
                       - run
